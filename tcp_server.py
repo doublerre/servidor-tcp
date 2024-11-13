@@ -27,6 +27,9 @@ def start_server():
                     if message == "hola servidor":
                         response = "HOLA CLIENTE"
                         client_socket.sendall(response.encode('utf-8'))
+                    else:
+                        response = message.upper()
+                        client_socket.sendall(response.encode('utf-8'))
             print("Esperando nueva conexión")
 
 if __name__ == "__main__":
